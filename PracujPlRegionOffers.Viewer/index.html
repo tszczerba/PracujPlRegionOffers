@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html xmlns:ng="http://angularjs.org" id="ng-app" data-ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <title>Pracuj.pl Job Offers</title>
+    <!--[if lte IE 7]>
+      <script src="Scripts/json2.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="Content/grid.css" />
+    <link rel="stylesheet" href="Content/style.css" />
+    <link rel="stylesheet" href="Content/loading.css" />
+
+</head>
+<body>
+    <div class="bigcontainer">
+        <div class="section group">
+            <div class="col span_8_of_10"><h1>Pracuj.pl</h1></div>
+            <div ng-show="loadingInd" class="col span_2_of_10 right loading-box">
+                <span></span>
+                <!--
+                -->
+                <span></span>
+                <!--
+                -->
+                <span></span>
+                <!--
+                -->
+                <span></span>
+                <!--
+                -->
+                <span></span>
+            </div>
+        </div>
+        <div class="section group">
+            <div class="col span_1_of_2"><a href="#/current"><h3 ng-class="{inactive: aboutPage}">Oferty pracy wg. województw</h3></a></div>
+            <div class="right col span_1_of_2"><a href="#/about"><h3 ng-class="{inactive: homePage}">O Aplikacji</h3></a></div>
+        </div>
+        <div data-ng-view></div>
+
+
+        <!-- Production solution would use min + bundle version-->
+        <script src="Scripts/angular.js"></script>
+        <script src="Scripts/angular-animate.js"></script>
+        <script src="Scripts/angular-resource.js"></script>
+        <script src="Scripts/angular-route.js"></script>
+        <script src="Scripts/angular-touch.js"></script>
+        <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+        <script src="Scripts/angular-charts.js"></script>
+
+
+        <script src="App/resources.js"></script>
+        <script src="App/controllers.js"></script>
+        <script src="App/services.js"></script>
+        <script src="App/app.js"></script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+﻿<div class="region-container section group">
+    <div class="col span_1_of_10"></div>
+    <div class="col span_8_of_10">
+        <h4>Wstęp</h4>
+        <p>Treść zadania jakie otrzymałem oraz krótki opis rozwiązania znajduje się poniżej. W razie problemów z uruchomieniem służę pomocą pod numerem telefonu 796 601 441 lub mailem <a href="mailto:t.szczerba@gmail.com">t.szczerba@gmail.com</a>. Mam również nadzieję, że będe miał okazję odpowiedzieć na wszelkie pytania na rozmowie kwalifikacyjnej :).</p>
+
+        <h4>Zadanie</h4>
+        <p>Treść otrzymanego zadania:</p>
+        <blockquote>
+            <p>Proszę napisać program zliczający i zapisujący do archiwum co 5 minut ze strony pracuj.pl liczbę ofert pracy w podziale na województwa. Dozwolone jest użycie dowolnych narzędzi.</p>
+        </blockquote>
+        <h4>Użyte narzędzia i technologie</h4>
+        <p>Obie aplikacje napisałem przy uzyciu Microsoft visual Studio 2013 Ultimate (<a href="http://www.visualstudio.com/en-us/downloads">90 dniowy trial</a>)</p>
+        <p>Użyte technologie i frameworki
+            <ul>
+                <li>.Net Framework 4.5</li>
+                <li>Entity Framework 6.1 z SQL Compact 4.0</li>
+                <li>ASP.NET MVC z Web Api</li>
+                <li><a data-ng-href="https://angularjs.org/">AngularJS</a></li>
+                <li>Html i css, części <a href="http://designmodo.github.io/Flat-UI/">Flat Ui</a>, <a href="http://www.responsivegridsystem.com/">Responsive Grid System</a></li>
+            </ul>
+        </p>
+        <h4>Architektura</h4>
+        <p>Rozwiązanie składa sie z czterech projektów:</p>
+        <ul>
+            <li>Konsolowa aplikacja, która pobiera dane ze strony pracuj.pl w regularnych odstępach czasu i zapisuje je do bazy danych</li>
+            <li>Aplikacja web, która odczytuje dane z bazy w regularnych odstępach czasu i prezentuje na stronie</li>
+            <li>Projekt Commons - wspólne dla obu aplikacji klasy</li>
+            <li>Projekt Tests</li>
+        </ul>
+        <p>Pliki do pobrania:</p>
+        <ul>
+            <li>Visual Studio Solution: <a target="_blank" href="api/FileDownload/source">PracujPlRegionOffers.zip</a></li>
+            <li>Log aplikacji web: <a target="_blank" href="api/FileDownload/weblog">log.svclog</a></li>
+            <li>Log aplikacji konsolowej: <a target="_blank" href="api/FileDownload/consolelog">log.svclog</a></li>
+            <li>Baza danych (można przeglądać <a target="_blank" href="http://sourceforge.net/projects/compactview/">compactview</a>): <a target="_blank" href="api/FileDownload/dbfile">RegionOffersDb.sdf</a></li>
+        </ul>
+        <p>Uwagi:</p>
+        <ul>
+            <li>Logi obu aplikacji znajdują się w plikach log.svclog w folderach uruchomieniowych</li>
+            <li>Ustawienia obu aplikacji znajdują sie w plikach App.config oraz Web.config.</li>
+            <li>Strona internetowa jest zoptymalizowana pod przeglądarkę Chrome</li>
+            <li>Przed uruchomieniem należy ustawić odpowiednio connection stringi tak aby w obu aplikacjach wskazywały na jedną bazę danych.</li>
+            <li>Jezeli aplikacja uruchamiana jest na nowej bazie danych należy uruchomić procedurę <strong>Add-Migration</strong> (nadając nazwę migracji np. Init ) a następnie <strong>Update-Database</strong> w Package Manager Console w celu zainicjalizowania i spopulowania jej odpowiednimi wpisami dla wymiaru Region.</li>
+            <li>W razie problemów z inicjalizacją bazy danych w katalogu <strong>\PracujPlRegionOffers\PracujPl.Commons\Database</strong> znajduje się zainicjalizowana baza danych.</li>
+            <li>Connection Stringi są skonfigurowane do działania na IIS Express w kalogu<strong>C:\PracujPlRegionOffers</strong> </li>
+        </ul>
+    </div>
+</div>
+<div class="spacer"></div>

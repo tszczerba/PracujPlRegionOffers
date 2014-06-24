@@ -1,0 +1,13 @@
+﻿<div id="{{regionOffer.id}}">
+    <div class="col span_2_of_10">
+        <a data-ng-show="regionOffer.selfJobOffers!=0" href="#/hist/{{regionOffer.name}}/10"><div class="region-name">{{regionOffer.name}}</div></a>
+        <div data-ng-show="regionOffer.selfJobOffers==0" class="region-name">{{regionOffer.name}}</div>
+    </div>
+    <div class="job-bar col span_7_of_10 progress">
+        <div class="progress-bar" style="width: {{regionOffer.progressPercent}}%;"></div>
+    </div>
+    <div class="col span_1_of_10">{{regionOffer.aggregateJobOffers}}</div>
+    <ul class="tree">
+        <li class="region-container section group" ng-repeat="regionOffer in regionOffer.children" ng-include="'App/views/jobOffer.html'"></li>
+    </ul>
+</div>
